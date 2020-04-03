@@ -1,0 +1,42 @@
+---List---
+
+- empty_list = []
+- Can contain multiple data types
+
+- Can have lists inside list 
+   - ex. people = [['Chris', 25], ['Amy', 20], ['Bob', 30]]
+
+- Can combine two lists to created nested list
+   - Use zip() function. zip(first_list, second_list)
+   - the result aren't actually lists, they are OBJECTS with first and second list values
+   - ex. [('Jenny', 61), ('Alexus', 70), ('Sam', 67), ('Grace', 65)]
+   - returns object memory, to print convert to list() -> list(zip(...))
+
+
+- To append list
+   - my_list.append(value)
+   - value can be an OBJECT containing multiple values if enclosed in () --> .append(('mystring',10))
+
+- Combining/adding lists
+   - use "+" 
+   - new_list = list1 + ['value 1', 'value2']
+
+- Shortcut to creating list with consecutive numbers
+   - use range() function, where range(5) generages list 0 to 4.
+   - 2 parameters - start and end. range (1,5) generates list 1 to 4
+   - 3 parameters - start, end, increrement. range(2,9,2) generates [2, 4, 6, 8]
+
+
+- len(my_list)
+   - returns length of list 
+
+- my_list[-1]
+   - using -1 selects last element even when you don't know length of list
+
+- slicing -> my_list[start:end]
+   - returns sublist of beginning from start to end (1 before end)
+   - can OMIT start and end (one only) to return "starting beginning" or "until end"
+   - can also use negative numbers like previous note. ex. (my_list[-3:]) -> returns last three elments
+
+- my_list.count(value)
+   - searches value in list and returns # of occurance
