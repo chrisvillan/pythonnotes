@@ -25,6 +25,7 @@
    - use range() function, where range(5) generages list 0 to 4.
    - 2 parameters - start and end. range (1,5) generates list 1 to 4
    - 3 parameters - start, end, increrement. range(2,9,2) generates [2, 4, 6, 8]
+   - enlclose range() in list() to return list --> list(range(values))
 
 
 - len(my_list)
@@ -40,3 +41,12 @@
 
 - my_list.count(value)
    - searches value in list and returns # of occurance
+
+- my_list.sort()
+   - sorts list
+   - DOES NOT RETURN ANYTHING. 
+
+- sorted(my_list)
+   - sorts list
+   - RETURNS NEW LIST 
+   - does not change original list

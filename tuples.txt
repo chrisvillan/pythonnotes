@@ -1,0 +1,17 @@
+---Tuples--
+
+- Similar to list but are IMMUTABLE - meaning values cant be changed
+
+- created with "()" instead of "[]" --> my_tuple = ('str1',val1)
+
+- can be called like a list --> firstelement = my_tuple[0]
+
+- can "UNPACK" a tuple but assigning the values to variables in one line --> var1, var2 = my_tuple
+   - var1 = str1
+   - var2 = val1
+
+- ONE ELEMENT tuple needs to be creating with a "trailing comma"
+   - Wrong: one_element_tuple = (4)
+   - () can be used to surround expression. Above just returns 4 as a number
+   - Right: one_element_tuple = (4,)
+   - the trailing comma allows above to return --> (4,) or one_element_tuple[0] = 4
