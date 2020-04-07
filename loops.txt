@@ -1,0 +1,24 @@
+---Loops---
+
+- for [temporary variable] in [list variable]:
+   - standard for loop. iterates n times where n is length of list
+   - if range is specificed then it is the more common For Loop
+	- for i in range (3) -> starts 0 and ends at 2 
+   - use "break" to have an exit statement out of For Loop
+   - use "continue" to skip to next iteration
+
+- while (statement):
+   - standard While Loop
+   - needs exit statment
+
+- nested for loops example
+   - for TEAM in PORJECTTEAMS:
+       for STUDENT in TEAM
+
+- list comprehensions / shortcut to for loops
+   - my_var = [i for i in my_list (optional if statement)]
+   - ex. usernames = [word for word in words if word[0] == '@']
+        - for each word that has '@' at the beginning, it's stored in usernames as a list
+   - can also modify first 'i' --> [i + " please follow me!" for ....] 
+
+   

@@ -50,3 +50,6 @@
    - sorts list
    - RETURNS NEW LIST 
    - does not change original list
+
+- my_list.pop()
+   - returns and removes last element in list
