@@ -1,0 +1,26 @@
+---Strings---
+
+- STRINGS ARE IMMUTABLE
+
+- my_string[:num]
+   - starts at beginning till num
+- my_string[num:]
+   - starts at num till end
+
+- escape characters -> \
+   - to use to inclue quotation in string. --> "He said, \"Hello\"."
+
+- use "in" to compare strings
+   - string1 in string2
+        - if string1 is in string2, returns True
+   - another ex, letter in word
+
+- Methods:
+   .lower() - returns all lowercase characters 
+   .upper() - returns all uppercase characters
+   .title() - returns string in title case (first letter of each word is capitalized)
+   .split() - returns list of split words, split by a delimiter. If delimiter is not specified, default is space.
+       -if end of string is the delimiter, last element on list will be empty string
+
+- '\n' - newline
+- '\t' - horizontal tab
