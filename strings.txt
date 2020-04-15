@@ -24,3 +24,23 @@
 
 - '\n' - newline
 - '\t' - horizontal tab
+
+- 'delimiter'.join(my_list)
+    - returns a string with -> list elements joined with given delimiter
+    - ' '.join(my_list) --> joins list elements with spaces
+
+- my_string.strip([character])
+    - removes given all instances of given character in string. If no arguement is passed, then default is empty spaces.
+    - can put multiple strip functions --> my_string.strip([character]).strip().strip([character])
+
+- my_string.replace([character_being_replaced], [new_character])
+
+- my_string.find([string])
+   - returns first index value where the string is located
+
+- my_string.format([string1, string2, ...])
+   - replaces '{}' in my_string with the string variables
+   - ex. "Hello {}, my name is {}".format("there", "Bob") --> "Hello there, my name is Bob.
+   - if variable is in '{}' then order doesnt matter. but will need to set an expression in format arguement
+        - ex. declared --> name = "Bob"
+        - "Hello {greeting}, my name is {name}".format(greeting = "there", name = name)

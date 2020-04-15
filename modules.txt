@@ -1,0 +1,13 @@
+---Modules---
+
+-Syntax --> from [module_name] import [object_name]
+
+-Common Modules
+  - datetime
+  - random (just need to use --> import random)
+       -random.choice() which takes a list as an argument and returns a number from the list
+       -random.randint() which takes two numbers as arguments and generates a random number between the two numers you passed in 
+
+- Aliasing
+   - from [module_name] import [object_name] as [new_object_name]
+        - allows you to call module from a new name. used for long module names

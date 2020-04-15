@@ -6,6 +6,7 @@
 	- for i in range (3) -> starts 0 and ends at 2 
    - use "break" to have an exit statement out of For Loop
    - use "continue" to skip to next iteration
+   - CANT MODIFY temp variable inside loop where it will take a new COUNT during iteration.
 
 - while (statement):
    - standard While Loop
