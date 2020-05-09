@@ -1,0 +1,6 @@
+---Files---
+
+- with open('[filename]') as [file_object_name]:
+	[my_var] = [file_object_name].read()
+	print([my_var])
+    - above snippet opens, reads, and prints filename 

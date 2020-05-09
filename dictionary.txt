@@ -1,0 +1,42 @@
+---Dictionaries---
+
+- A dictionary is an unordered set of --> [key]:[value] 
+- created by '{}' similar to list with '[]' 
+- Keys should not be able to change
+   - meaning that you can't use a list for keys (since list can be changed later on.
+
+- To append dictionaries
+     - use format --> my_dict[(new key)] = (new value)
+     - if new key exists, it will overide existing one
+- To append multiple keys
+    - use update() --> my_dict.update({[key1]:value1, [key2]:value2...})
+
+- List comprehensions in dictionaries
+    - two different lists (list1,list2) --> my_dict = {key:value for key, value in zip(list1,list2)}
+
+- Search for values in dicts --> my_dict[(key)]
+    - returns value
+    - if no key exists, returns KEYERROR
+
+- Better search method --> my_dict.get([key], [return value if key doesnt exist])
+    - returns value
+    - if no key exists and no second argument, returns None
+
+- to REMOVE --> my_dict.pop([key],[optional_return_value])
+    - returns value of key
+    - optional value will be returned if key doesn't exist
+
+- to get values in dictionaries
+    - list(my_dict) -->  returns keys (not values)
+ 
+- .keys()
+    - returns keys as a dict_keys object
+    - my_dict.keys() --> returns --> dict_keys(['key1','key2',key3'])
+
+- .values()
+    - returns values as a dict_values object
+    - my_dict.values() --> returns --> dict_values(['val1','val2',val3'])
+
+- .items()
+    - returns keys and values as a dict_items object
+    - my_dict.items() --> returns --> dict_items([('key1','value1'),('key2','value2')]) 

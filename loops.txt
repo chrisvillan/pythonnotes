@@ -22,4 +22,9 @@
         - for each word that has '@' at the beginning, it's stored in usernames as a list
    - can also modify first 'i' --> [i + " please follow me!" for ....] 
 
+- for loops in list of objects
+    - if list has objects you can iterate with 2 values
+    - ex. --> my_list([(a1,b1),(a2,b2),(a3,b3)])
+    - for val1, val2 in my_list: 
+             - val1 is a's and val2 is b's
    

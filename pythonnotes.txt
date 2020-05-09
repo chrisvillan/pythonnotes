@@ -1,3 +1,11 @@
 ---General Notes---
 
 - multiline string use triple quotation: """    .....   """
+
+- check if value is in something use --> if [value] in [list/dict]
+
+- try/except 
+  try: 
+     [code snippet]
+  except [error type]:
+     [code snippet]
