@@ -1,6 +1,116 @@
 ---Files---
 
+- READING FILES
 - with open('[filename]') as [file_object_name]:
 	[my_var] = [file_object_name].read()
 	print([my_var])
     - above snippet opens, reads, and prints filename 
+
+- .read() vs .readlines() vs .readline()
+   - read() - returns as a single string
+   - readlines() - returns multilline strings
+   - readline() - returns string lines, line by line. 
+         -ex. first_line = doc.readline()
+              second_line = doc.readline()
+         -would use the function multiple times
+
+- WRITING FILES
+- with open('[filename'], 'w') as gen_file:
+	gen_file.write("HELLO")
+   - above will generate 'filename' and have text of "Hello"
+   - putting the 'w' will open in write-mode. open() takes 2 argument, if not specified, 'r' is used as read-mode
+   - if 'filename' exists, it will override it
+- to APPEND a file, use 'a' instead of 'w'. Will add the to end of file
+
+- using 'with' keyword. It's a context manager that takes care of opening and closing files.
+
+- old syntax to open and close files:
+	my_file = open('thisfile.txt,'a')
+	my_file.write('new text')
+	my_file.close()
+
+
+
+---CSV Files---
+
+#
+import csv
+
+with open('filename.csv') as my_csv:
+	[my_dict] = csv.DictReader([my_csv])
+	for [i] in [my_dict]
+		print(i)
+#
+
+- DictReader() converts csv file into dictionary, with first line as the keys
+
+CSVFILE:
+
+key1,key2,key3
+
+val1,val2,val3
+
+val4,val5,val 6
+
+ConvertedTo Dict:
+OrderdDict([(key1,val1), (key2,val2), (key3,val3)])
+OrderdDict([(key1,val4), (key2,val5), (key3,val6)])
+
+
+-DictReader([filename], delimiter = '@')
+  - delimter arguement is optional, default is ','
+
+#
+list_of_dict = [{'field1':'val1'}, {'field2':'val2'}, {'field3':'val3'}]
+
+[fields] = ['field1', 'field2', 'field3']
+
+with open([filename], 'w') as [my_csv]:
+	[my_file_handler_object] = csv.DictWriter([my_csv], fieldnames = [fields])
+	
+	[my_file_handler_object].writeheader()
+	
+	for i in [list_of_dict]:
+		[my_file_handler_object].writerow(i)
+#
+
+- above code writes a list of dict to a csv file
+- note that DictWriter needs to have a second argument with fieldnames
+
+---JSON Files (JavaScript Object Notation)-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
