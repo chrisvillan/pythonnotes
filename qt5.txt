@@ -3,8 +3,15 @@ https://techwithtim.net/tutorials/pyqt5-tutorial/basic-gui-application/
 install:
 pip install pyqt5
 pip install pyqt5-tools
+
+
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QInputDialog, QLineEdit
+
+from PyQt5 import QtGui
+from PyQt5.QtGui import QPainter, QBrush, QPen, QLinearGradient, QColor
+from PyQt5.QtCore import Qt
+
 import sys
 
 
@@ -13,14 +20,16 @@ class MyWindow(QMainWindow):
     def __init__(self):
         #creates parent constructor
         super(MyWindow, self).__init__()
-        #win.setGeometry(xpos,ypos,width,height)
+        #setGeometry(xpos,ypos,width,height)
         self.setGeometry(660,340,300,300)
+        #self.setStyleSheet("background: rgb(2,0,36);")
         self.setWindowTitle("New Window Applicatioin")
         self.initUI()
 
     def initUI(self):
         self.label = QtWidgets.QLabel(self)
         self.label.setText("my first label")
+        self.label.setStyleSheet("color:white")
         self.label.move(50,100)
 
         #creates input box
@@ -36,11 +45,29 @@ class MyWindow(QMainWindow):
     def clicked(self):
         txtboxval = self.textbox.text()
         self.label.setText("you entered" + txtboxval)
-        self.update()
+        #self.update()
      
+
+
+    def paintEvent(self, e):
+        painter = QPainter(self)
+        painter.setPen(QPen(Qt.black, 1, Qt.SolidLine))
+ 
+        grad1 = QLinearGradient(0, 150, 300, 150)
+
+        color1= QColor(41,50,60)
+        color2= QColor(72,85,99)
+        grad1.setColorAt(0.0,color1)
+        grad1.setColorAt(1, color2)
+        painter.setBrush(QBrush(grad1))
+ 
+        painter.drawRect(0, 0, 300, 300)
+        self.update()
+
     #creates update label function because above text will be cut off
     def update(self):
         self.label.adjustSize()
+ 
     
 
 def window():
