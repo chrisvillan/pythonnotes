@@ -1,0 +1,54 @@
+https://techwithtim.net/tutorials/pyqt5-tutorial/basic-gui-application/
+
+install:
+pip install pyqt5
+pip install pyqt5-tools
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QInputDialog, QLineEdit
+import sys
+
+
+#create new class that inherits QMainWindow class
+class MyWindow(QMainWindow):
+    def __init__(self):
+        #creates parent constructor
+        super(MyWindow, self).__init__()
+        #win.setGeometry(xpos,ypos,width,height)
+        self.setGeometry(660,340,300,300)
+        self.setWindowTitle("New Window Applicatioin")
+        self.initUI()
+
+    def initUI(self):
+        self.label = QtWidgets.QLabel(self)
+        self.label.setText("my first label")
+        self.label.move(50,100)
+
+        #creates input box
+        self.textbox = QLineEdit(self)
+        self.textbox.move(20,40)
+
+        #create buttons
+        self.b1 = QtWidgets.QPushButton(self)
+        self.b1.setText("click me")
+        #connects button to function button1d()
+        self.b1.clicked.connect(self.clicked)
+    
+    def clicked(self):
+        txtboxval = self.textbox.text()
+        self.label.setText("you entered" + txtboxval)
+        self.update()
+     
+    #creates update label function because above text will be cut off
+    def update(self):
+        self.label.adjustSize()
+    
+
+def window():
+    app = QApplication(sys.argv)
+    win = MyWindow()
+    win.show()
+    #waits for Qapp to exit and then closes app
+    sys.exit(app.exec_())
+
+window()
+    

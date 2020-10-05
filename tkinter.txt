@@ -30,3 +30,30 @@ label = tk.Label(
     height=10
     
 )
+
+button = tk.Button(
+    text="Click me!",
+    width=25,
+    height=5,
+    bg="blue",
+    fg="yellow",
+    command = [function name]
+)
+
+
+---User Input--
+#initiaizes
+entry = tk.Entry()
+
+#gets user text and assigns to variable
+mytext = entry.get()
+
+#inserts text on start
+entry.insert(0,"Insert text")
+
+entry.pack()
+
+
+
+
+
