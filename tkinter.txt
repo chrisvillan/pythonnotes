@@ -1,0 +1,32 @@
+realpython.com/python-gui-tkinter
+
+import tkinter as tk
+
+//Create an instance of TK class
+window = tk.TK()
+
+//Add label
+mylabel = tk.Label(text="Hello")
+
+//Need following code to see changes
+mylabel.pack()
+//pack() allows window to adjust size to enapsulate object
+
+//Put end. mainloop() listens for events and blocks code after it until event is done
+window.mainloop()
+
+Widget class:
+Label - display text and image
+Button - causes event 
+Entry  - SINGLE line input
+Text - MULTI line input
+Frame - rectangular region
+
+label = tk.Label(
+    text="Hello, Tkinter",
+    foreground="white",  # Set the text color to white
+    background="black"  # Set the background color to black    
+    width=10,
+    height=10
+    
+)
